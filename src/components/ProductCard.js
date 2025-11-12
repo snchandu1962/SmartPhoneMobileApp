@@ -5,12 +5,8 @@ const ProductCard = ({product}) => {
   const renderStars = rating => {
     const stars = [];
     const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push('⭐');
-    }
-    if (hasHalfStar) {
       stars.push('⭐');
     }
 
@@ -30,7 +26,9 @@ const ProductCard = ({product}) => {
           <Text style={styles.rating}>{product.rating}</Text>
         </View>
         <Text style={styles.price}>${product.price}</Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity 
+          style={styles.button}
+          onPress={() => console.log('View product:', product.id)}>
           <Text style={styles.buttonText}>View Details</Text>
         </TouchableOpacity>
       </View>
