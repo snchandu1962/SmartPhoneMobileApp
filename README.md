@@ -18,7 +18,7 @@ A beautiful Progressive Web App for controlling smart home devices with an intui
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://yourusername.github.io/home-harmony) *(Replace with your actual GitHub Pages URL)*
+[View Live Demo](https://snchandu1962.github.io/SmartPhoneMobileApp)
 
 ## 📱 Installation
 
