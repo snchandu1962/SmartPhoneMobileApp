@@ -1,0 +1,26 @@
+## Prompt 1
+You are building a smart home mobile interface using HTML, CSS, and JavaScript.
+The interface should allow users to control various aspects of their smart home,
+such as lighting, temperature, and music preferences.
+
+First, create the HTML structure for the smart home interface.
+Include a header with the title and three main sections for lighting,
+temperature, and music.
+
+Each section should include buttons to control lighting, temperature,
+and music based on user preferences.
+
+## Prompt 2
+Use icon fonts to display light, temperature, and music icons next to
+each section heading and for the corresponding buttons. 
+
+## Prompt 3
+Next, apply CSS styles to achieve a mobile-friendly layout with a
+dark and sleek design. Use soft gradients, shadows and the provided colors 
+(#28074a, #bd4de5, #491088, #6c1dd0, #ff19db, #ff7f1a) for 
+backgrounds, buttons, and other elements.
+## prompt 4
+Please update the necessary code to display the temperature at 
+78 degrees Fahrenheit initially. Allow users to increase or decrease 
+the temperature by clicking the corresponding buttons. 
+Style the temperature display accordingly with CSS.

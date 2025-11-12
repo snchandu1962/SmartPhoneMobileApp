@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Harmony</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Control your smart home devices with ease">
+    <meta name="theme-color" content="#bd4de5">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Home Harmony">
+    <meta name="msapplication-TileColor" content="#28074a">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-192x192.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-72x72.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-home"></i> Home Harmony</h1>
+        </header>
+
+        <main>
+            <!-- Lighting Control Section -->
+            <section class="control-section" id="lighting-section">
+                <h2><i class="fas fa-lightbulb"></i> Lighting</h2>
+                <div class="controls">
+                    <button class="control-btn" id="lights-toggle" data-action="toggle">
+                        <i class="fas fa-power-off"></i>
+                        <span>Toggle Lights</span>
+                    </button>
+                </div>
+                <div class="status" id="lighting-status">
+                    <span>Status: <span class="status-text">Off</span></span>
+                </div>
+            </section>
+
+            <!-- Temperature Control Section -->
+            <section class="control-section" id="temperature-section">
+                <h2><i class="fas fa-thermometer-half"></i> Temperature</h2>
+                <div class="controls">
+                    <button class="control-btn" id="temp-up" data-action="temp-up">
+                        <i class="fas fa-chevron-up"></i>
+                        <span>Temperature +</span>
+                    </button>
+                    <button class="control-btn" id="temp-down" data-action="temp-down">
+                        <i class="fas fa-chevron-down"></i>
+                        <span>Temperature -</span>
+                    </button>
+                    <button class="control-btn" id="ac-toggle" data-action="ac-toggle">
+                        <i class="fas fa-wind"></i>
+                        <span>Toggle AC</span>
+                    </button>
+                    <button class="control-btn" id="heat-toggle" data-action="heat-toggle">
+                        <i class="fas fa-fire"></i>
+                        <span>Toggle Heat</span>
+                    </button>
+                </div>
+                <div class="status" id="temperature-status">
+                    <div class="temperature-display">
+                        <span>Temperature: <span class="status-text">78°F</span></span>
+                        <div class="temperature-bar">
+                            <div class="temperature-fill" id="temp-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Music Control Section -->
+            <section class="control-section" id="music-section">
+                <h2><i class="fas fa-music"></i> Music</h2>
+                <div class="controls">
+                    <button class="control-btn" id="music-play" data-action="play">
+                        <i class="fas fa-play"></i>
+                        <span>Play</span>
+                    </button>
+                    <button class="control-btn" id="music-pause" data-action="pause">
+                        <i class="fas fa-pause"></i>
+                        <span>Pause</span>
+                    </button>
+                    <button class="control-btn" id="music-next" data-action="next">
+                        <i class="fas fa-forward"></i>
+                        <span>Next</span>
+                    </button>
+                    <button class="control-btn" id="music-prev" data-action="prev">
+                        <i class="fas fa-backward"></i>
+                        <span>Previous</span>
+                    </button>
+                    <button class="control-btn" id="volume-up" data-action="volume-up">
+                        <i class="fas fa-volume-up"></i>
+                        <span>Volume +</span>
+                    </button>
+                    <button class="control-btn" id="volume-down" data-action="volume-down">
+                        <i class="fas fa-volume-down"></i>
+                        <span>Volume -</span>
+                    </button>
+                </div>
+                <div class="status" id="music-status">
+                    <span>Status: <span class="status-text">Stopped</span></span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

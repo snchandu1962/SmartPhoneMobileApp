@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator</title>
+    <style>
+        canvas { border: 1px solid #ccc; margin: 10px; }
+        body { font-family: Arial, sans-serif; padding: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Home Harmony Icon Generator</h2>
+    <p>Right-click on each canvas and "Save image as..." to download the icons</p>
+    
+    <script>
+        const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
+        
+        sizes.forEach(size => {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            canvas.title = `icon-${size}x${size}.png`;
+            
+            const ctx = canvas.getContext('2d');
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#28074a');
+            gradient.addColorStop(0.5, '#bd4de5');
+            gradient.addColorStop(1, '#ff19db');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            // Add home icon
+            ctx.fillStyle = 'white';
+            ctx.font = `${size * 0.4}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('🏠', size / 2, size / 2);
+            
+            // Add border
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(1, 1, size - 2, size - 2);
+            
+            document.body.appendChild(canvas);
+            
+            const label = document.createElement('p');
+            label.textContent = `${size}x${size}px`;
+            document.body.appendChild(label);
+        });
+    </script>
+</body>
+</html>

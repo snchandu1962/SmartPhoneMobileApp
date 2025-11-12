@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file:///Users/sncha/Documents/demo/smartPhoneMobileApp/generate-icons.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Icon Generator</title>
+    <style>
+        canvas { border: 1px solid #ccc; margin: 10px; }
+        body { font-family: Arial, sans-serif; padding: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Home Harmony Icon Generator</h2>
+    <p>Right-click on each canvas and "Save image as..." to download the icons</p>
+    
+    <script>
+        const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
+        
+        sizes.forEach(size => {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            canvas.title = `icon-${size}x${size}.png`;
+            
+            const ctx = canvas.getContext('2d');
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#28074a');
+            gradient.addColorStop(0.5, '#bd4de5');
+            gradient.addColorStop(1, '#ff19db');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            // Add home icon
+            ctx.fillStyle = 'white';
+            ctx.font = `${size * 0.4}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('🏠', size / 2, size / 2);
+            
+            // Add border
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(1, 1, size - 2, size - 2);
+            
+            document.body.appendChild(canvas);
+            
+            const label = document.createElement('p');
+            label.textContent = `${size}x${size}px`;
+            document.body.appendChild(label);
+        });
+    </script><canvas width="72" height="72" title="icon-72x72.png"></canvas><p>72x72px</p><canvas width="96" height="96" title="icon-96x96.png"></canvas><p>96x96px</p><canvas width="128" height="128" title="icon-128x128.png"></canvas><p>128x128px</p><canvas width="144" height="144" title="icon-144x144.png"></canvas><p>144x144px</p><canvas width="152" height="152" title="icon-152x152.png"></canvas><p>152x152px</p><canvas width="192" height="192" title="icon-192x192.png"></canvas><p>192x192px</p><canvas width="384" height="384" title="icon-384x384.png"></canvas><p>384x384px</p><canvas width="512" height="512" title="icon-512x512.png"></canvas><p>512x512px</p>
+
+
+</body></html>
